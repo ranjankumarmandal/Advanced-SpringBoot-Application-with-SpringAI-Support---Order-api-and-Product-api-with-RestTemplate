@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Data
+@Table(name = "orders")
 @NoArgsConstructor
 @AllArgsConstructor
 public class Order {

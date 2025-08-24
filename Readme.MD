@@ -20,19 +20,17 @@ This is a Spring Boot REST API that simulates placing an order. Before creating 
 
 - APIs on Swagger
 
- ![img.png](img.png)
+![img.png](img.png)
+
+![img_1.png](img_1.png)
 
 - Postman Request
 
  ![img_1.png](img_1.png)
 
-- Postman Request (for GET filter and pagination support: http://localhost:8080/books/page?page=0&size=5&sortBy=title)
- 
- ![img_3.png](img_3.png)
-
 - H2 DB console
 
- ![img_2.png](img_2.png)
+![img_3.png](img_3.png)
 
 
 ## 🚀 Getting Started
@@ -75,6 +73,9 @@ Product not available.
 Error occurred: 404 Not Found
 
 </details>
+
+## Swagger UI
+http://localhost:8080/swagger-ui.html
 
 ## License
 This project is licensed under the MIT License.
