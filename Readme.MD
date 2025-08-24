@@ -44,17 +44,8 @@ This is a Spring Boot REST API that simulates placing an order. Before creating 
 - Spring Web
 - Spring Data JPA
 - H2 Database
-- Spring Profiles
 - Lombok (optional)
 - Springdoc OpenAPI (Swagger UI)
-
-### 📌 Special Features
-- @Transactional for atomic DB updates
-- @Profile for environment-specific beans (dev / prod)
-- @Qualifier to resolve multiple implementations
-- @Scheduled for periodic tasks
-- @Value, @PostConstruct, @PreDestroy for lifecycle & config
-- H2 console: http://localhost:8080/h2-console
 
 ### ▶️ Run the App
 
@@ -63,13 +54,27 @@ mvn spring-boot:run
 
 ## API Endpoints
 
-**Method**	**Endpoint**	**Description**
-- GET	    /books	    (Get all books)
-- GET	    /books/{id}	(Get book by ID)
-- POST	    /books	    (Add new book)
-- PUT	    /books/{id}	(Update book by ID)
-- DELETE	/books/{id}	(Delete book by ID)
-- GET	    /books/page	(Paginated books)
+POST /orders?productId=1
+
+GET http://localhost:8080/api/ai/ask?prompt=Tell me a joke
+
+<details> <summary>📦 Sample JSON Response</summary>
+✅ Success
+<pre>{
+  "id": 1,
+  "productId": 1,
+  "productName": "Fjallraven - Foldsack No. 1 Backpack",
+  "price": 109.95,
+  "createdAt": "2025-08-24T13:45:21.123"
+}</pre>
+
+❌ Product Not Available
+Product not available.
+
+❌ Invalid ID or API Error
+Error occurred: 404 Not Found
+
+</details>
 
 ## License
 This project is licensed under the MIT License.
